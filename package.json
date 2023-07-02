@@ -1,0 +1,41 @@
+{
+  "name": "create-awe-project",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "template",
+    "cli",
+    "generator"
+  ],
+  "author": "fanlong",
+  "license": "MIT",
+  "bin": {
+    "awe-project": "bin/cli.js"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "npm run build -- --watch",
+    "prebuild": "rm -rf lib",
+    "build": "babel src -d lib"
+  },
+  "dependencies": {
+    "minimist": "^1.2.8",
+    "semver": "^7.5.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.5",
+    "@babel/core": "^7.22.5",
+    "@babel/preset-env": "^7.22.5"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "engines": {
+    "node": ">= 6"
+  }
+}
